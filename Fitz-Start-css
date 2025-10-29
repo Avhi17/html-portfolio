@@ -1,0 +1,136 @@
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .spin {
+    animation: spin 6s linear infinite; /* optional rotation */
+    margin-bottom: 1.5rem;
+  }
+  
+  .highlight {
+    color: #f2a068;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+.features {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0d0d0d; /* dark background */
+    color: white;
+  }
+  
+  .features-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .features-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; /* responsive for small screens */
+  }
+  
+  .feature-card {
+    background: #1a1a1a;
+    padding: 30px 20px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #2c2c2c;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: white;
+  }
+  
+  .icon-orange {
+    background-color: #ff7043;
+  }
+  
+  .icon-green {
+    background-color: #4caf50;
+  }
+  
+  .icon-blue {
+    background-color: #2196f3;
+  }
+  
+  .feature-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .feature-card p {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.5;
+  }
+
+  .cta-section {
+    background-color: #0d0d0d; /* Dark background */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .cta-section p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background: linear-gradient(90deg, #ff7b00, #ff5722);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.5);
+  }
