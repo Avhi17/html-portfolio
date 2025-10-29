@@ -1,0 +1,68 @@
+import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../images/logo.png"; 
+import "./Start.css"; 
+
+export default function Start() {
+  return (
+    <>
+      <section className="hero-section">
+      <div className="spin">
+        <img src={logo} alt="logo" />
+      </div>
+
+      <main className="hero-content">
+        <h1>
+          Transform Your <span className="highlight">Fitness</span>
+        </h1>
+        <p>
+          Track workouts, monitor progress, and achieve your fitness goals with
+          our comprehensive fitness platform.
+        </p>
+      </main>
+    </section>
+      <section className="features">
+      <h2 className="features-title">Why Choose FitZone?</h2>
+      
+      <div className="features-container">
+        {/* Card 1 */}
+        <div className="feature-card">
+          <div className="icon icon-orange">💪</div>
+          <h3>Find Expert Trainers</h3>
+          <p>
+            Connect with certified trainers who provide personalized guidance for workouts and fitness goals.
+          </p>
+        </div>
+
+        {/* Card 2 */}
+        <div className="feature-card">
+          <div className="icon icon-green">🥗</div>
+          <h3>Custom Diet Plans</h3>
+          <p>
+            Get diet charts tailored to your body type and goals, curated by professional nutritionists.
+          </p>
+        </div>
+
+        {/* Card 3 */}
+        <div className="feature-card">
+          <div className="icon icon-blue">📈</div>
+          <h3>Track Your Progress</h3>
+          <p>
+            Monitor your workouts, diet adherence, and fitness improvements with detailed charts and stats.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section className="cta-section">
+      <div className="cta-content">
+        <h2>Ready to Start Your Fitness Journey?</h2>
+        <p>Join thousands of users who have transformed their lives with FitZone.</p>
+        <Link to="/fitnesssetup" className="cta-button">Get Started Now</Link>
+      </div>
+    </section>
+      
+    </>
+  );
+}
