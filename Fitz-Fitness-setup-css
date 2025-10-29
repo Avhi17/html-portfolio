@@ -1,0 +1,160 @@
+/* Background */
+.fitness-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #f9fafc, #fefaf7);
+    font-family: "Inter", sans-serif;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Back link */
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+    background-color: #2563eb;
+  }
+  
+  /* Heading */
+  .page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .page-title span {
+    background: linear-gradient(90deg, #2563eb, #f97316);
+    background-clip: text;          /* ✅ Standard property */
+    -webkit-background-clip: text;  /* ✅ Safari/Chrome */
+    -webkit-text-fill-color: transparent;
+    color: transparent;             /* ✅ Fallback for other browsers */
+  }
+  .subtitle {
+    color: #6b7280;
+    margin-bottom: 2rem;
+  }
+  
+  /* Card */
+  .form-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 0.25rem;
+  }
+  
+  .form-subtitle {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* equal spacing between inputs */
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  /* Two-column row */
+  .form-row {
+    display: flex;
+    gap: 1rem; /* space between Full Name and Age */
+  }
+  
+  .form-row .form-group {
+    flex: 1; /* equal width */
+  }
+  
+  /* Inputs & Selects */
+  input,
+  select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+  
+  label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  
+  small {
+    margin-top: 0.3rem;
+    color: #9ca3af;
+    font-size: 0.75rem;
+  }
+  
+  /* Upload box */
+  .upload-box {
+    width: 100%;
+    border: 2px dashed #d1d5db;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    color: #6b7280;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .upload-box span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .upload-box:hover {
+    background: #f9fafb;
+  }
+  
+  /* Button */
+  .btn-submit {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #2563eb, #f97316);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+  }
+  
+  .btn-submit:hover {
+    opacity: 0.9;
+  }
+  
