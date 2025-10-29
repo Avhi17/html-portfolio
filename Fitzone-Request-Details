@@ -1,0 +1,123 @@
+import React, { useState } from "react";
+import "./RequestDetails.css";
+import { useParams, useNavigate } from "react-router-dom";
+
+export default function RequestDetails() {
+  const [bid, setBid] = useState({
+    amount: "",
+    timeline: "",
+    proposal: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setBid((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = () => {
+    if (!bid.amount || !bid.timeline || !bid.proposal) {
+      alert("Please fill all fields before submitting your bid!");
+      return;
+    }
+
+    alert(
+      `✅ Bid Submitted Successfully!\nAmount: ₹${bid.amount}\nTimeline: ${bid.timeline}\nProposal: ${bid.proposal}`
+    );
+
+    // Reset form
+    setBid({ amount: "", timeline: "", proposal: "" });
+  };
+
+  return (
+    <div className="request-page">
+      <button className="back-btn">← Back to Requests</button>
+
+      {/* Request Details Section */}
+      <div className="card">
+        <h3>Request Details</h3>
+        <p className="time">2h ago</p>
+
+        <h2 className="title">
+          Professional 45-minute full-body strength training video
+        </h2>
+        <p className="desc">
+          Looking for a professional 45-minute full-body strength training video
+          with demonstrations of proper form. Need clear instructions and
+          modifications for beginners.
+        </p>
+
+        <hr />
+
+        <div className="specs">
+          <h4>📄 Specifications</h4>
+          <p>
+            1080p HD, 40–50 minutes, professional lighting, clear audio with
+            background music
+          </p>
+        </div>
+
+        <div className="budget">
+          <h4>💰 Client Budget</h4>
+          <p className="price">₹15,000</p>
+        </div>
+      </div>
+
+      {/* Submit Bid Section */}
+      <div className="card bid-form">
+        <h3>Submit Your Bid</h3>
+        <p className="subtext">
+          Provide your best offer and explain why you're the right fit for this
+          project.
+        </p>
+
+        <label>💸 Your Bid Amount *</label>
+        <input
+          type="number"
+          name="amount"
+          placeholder="Enter your bid amount"
+          value={bid.amount}
+          onChange={handleChange}
+        />
+
+        <label>⏰ Delivery Timeline *</label>
+        <select
+          name="timeline"
+          value={bid.timeline}
+          onChange={handleChange}
+        >
+          <option value="">Select delivery time</option>
+          <option value="1 day">1 day</option>
+          <option value="3 days">3 days</option>
+          <option value="1 week">1 week</option>
+          <option value="2 weeks">2 weeks</option>
+        </select>
+
+        <label>📝 Your Proposal *</label>
+        <textarea
+          name="proposal"
+          placeholder="Describe your approach, experience, and why you're the best fit for this project..."
+          value={bid.proposal}
+          onChange={handleChange}
+        />
+
+        <div className="buttons">
+          <button className="cancel">Cancel</button>
+          <button className="submit" onClick={handleSubmit}>
+            🚀 Submit Bid
+          </button>
+        </div>
+      </div>
+
+      {/* Tips Section */}
+      <div className="card tips">
+        <h3>Tips for a Winning Bid</h3>
+        <ul>
+          <li>Be competitive but realistic with your pricing</li>
+          <li>Highlight your relevant experience and expertise</li>
+          <li>Include links to portfolio or previous similar work</li>
+          <li>Ask clarifying questions if needed</li>
+        </ul>
+      </div>
+    </div>
+  );
+}
